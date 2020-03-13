@@ -3,7 +3,7 @@ const mongodbClient=mongodb.MongoClient;
 const dbName="TODO_DB";
 const collectionName="TODO_LIST";
 
-var url = 'mongodb+srv://soumitya:soumitya@cluster0-tcuot.mongodb.net/test?retryWrites=true&w=majority'
+var url = 'mongodb+srv://soumitya:####@cluster0-tcuot.mongodb.net/test?retryWrites=true&w=majority'
 const connectDB=mongodbClient.connect(url,{ useUnifiedTopology: true },function(err,client){
     if(err){
 
