@@ -1,6 +1,6 @@
 # Simple TODO
 
-#Technologies used
+# Technologies used
 <ul>
   <li>Html</li>
   <li>CSS</li>
