@@ -99,7 +99,7 @@ module.exports = function(app, db) {
 
         console.log("todoId "+todoId);
 
-        res.send(todoId);
+        //res.send(todoId);
 
         collection
         .updateOne(
@@ -120,10 +120,39 @@ module.exports = function(app, db) {
           })
 
 
-
     })
 
 
+     //update for edit todos
+     
+     app.put('/api/todos/update/:todoId',function(req, res){
+      const collection = db.collection(collectionName);
+      const todoId = req.params.todoId;
+
+      console.log("todoId "+todoId);
+
+      //res.send(todoId);
+
+      collection
+        .updateOne(
+          { _id: new ObjectID(todoId) },
+          { $set: { todo: (req.body.todo) }  }   
+        ).then(
+            res.send({
+              message: "success",
+              updatedCount: "1"
+            })
+          )
+          .catch(err =>{
+            res.status(400).send({
+                status: "error",
+                message: err
+              });
+    
+          })
+
+
+     }) 
 
 
     

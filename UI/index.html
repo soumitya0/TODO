@@ -34,6 +34,25 @@
   </ul>
   
        
+
+
+  <!--FORM -->
+<div class="form-popup" id="myForm">
+    <div  class="form-container">
+        <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+        <h1>Todo Update</h1>
+  
+
+      <input id="oldtodo" type="text" placeholder="old Todo" name="oldtodo" disabled = "true">
+  
+      <input id="newtodo" type="text" style="position: relative;" placeholder="New Todd" name="newtodo" required>
+        
+      <button type="submit" class="btn" onclick="todoUpdate()">Update</button>
+
+
+    </div>
+  </div>
         
     <script src="./add.js"></script>
 </body>
