@@ -352,8 +352,12 @@ function deleteClick () {
         }
       })
 
+      window.location.reload();
+
       document.getElementById("myForm").style.display = "none";
 
+      console.log("i am called");
+      
     }
     
   
